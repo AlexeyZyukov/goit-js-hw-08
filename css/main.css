@@ -1,0 +1,26 @@
+/* task-03 =============================== */
+.gallery--flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.gallery_item {
+  flex-basis: calc((100% - 30px * 2) / 2);
+}
+.gallery_item:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+/* task-06 =============================== */
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
