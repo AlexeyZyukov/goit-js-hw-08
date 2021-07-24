@@ -8,32 +8,19 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <li class="gallery__item">
-      <a
-        class="gallery__link"
-        href="https://cdn.pixabay.com/photo/2010/12/13/10/13/tulips-2546_1280.jpg"
-      >
-        <img
-          class="gallery__image"
-          src="https://cdn.pixabay.com/photo/2010/12/13/10/13/tulips-2546__340.jpg"
-          data-source="https://cdn.pixabay.com/photo/2010/12/13/10/13/tulips-2546_1280.jpg"
-          alt="Tulips"
-        />
-      </a>
-    </li>
-
     <!-- В этот список добавляй элементы галереи -->
     <ul class="gallery js-gallery"></ul>
 
     <!--
       Модальное окно для полноразмерного изображения
-      Для того чтобы открыть, необходимо добавить на div.lightbox CSS-класс is-open
+      Для того чтобы открыть, необходимо добавить на 
+      div.lightbox CSS-класс is-open
     -->
     <div class="lightbox js-lightbox">
       <div class="lightbox__overlay"></div>
 
       <div class="lightbox__content">
-        <img class="lightbox__image" src="" alt="" />
+        <img class="lightbox__image" src="#" alt="" />
       </div>
 
       <button
@@ -43,6 +30,6 @@
       ></button>
     </div>
 
-    <script src="app.js" type="module"></script>
+    <script src="/js/app.js" type="module"></script>
   </body>
 </html>
