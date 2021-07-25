@@ -136,16 +136,19 @@ function overlayWindowClose() {
     //console.log(lightboxImage);
 };
 
-lightboxRef.addEventListener('click', overlayWindowsCloseMouse);
-function overlayWindowsCloseMouse(event) {
+lightboxRef.addEventListener('click', overlayWindowsCloseByMouse);
+function overlayWindowsCloseByMouse(event) {
   let result = new MouseEvent('event', {
   });
   lightboxRef.classList.remove('is-open')
 };
 
-
+document.addEventListener('keydown', overlayWindowCloseByEsc)
 function overlayWindowCloseByEsc(event) {
   
+  if (event.key === 'Escape')
+      //console.log(event.key);  
+    lightboxRef.classList.remove('is-open')
 };
 
 //Стартовые файлы===========================================================
