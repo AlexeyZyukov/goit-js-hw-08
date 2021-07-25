@@ -145,7 +145,6 @@ function overlayWindowsCloseByMouse(event) {
 
 document.addEventListener('keydown', overlayWindowCloseByEsc)
 function overlayWindowCloseByEsc(event) {
-  
   if (event.key === 'Escape')
       //console.log(event.key);  
     lightboxRef.classList.remove('is-open')
