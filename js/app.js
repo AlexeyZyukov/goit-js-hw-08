@@ -136,6 +136,18 @@ function overlayWindowClose() {
     //console.log(lightboxImage);
 };
 
+lightboxRef.addEventListener('click', overlayWindowsCloseMouse);
+function overlayWindowsCloseMouse(event) {
+  let result = new MouseEvent('event', {
+  });
+  lightboxRef.classList.remove('is-open')
+};
+
+
+function overlayWindowCloseByEsc(event) {
+  
+};
+
 //Стартовые файлы===========================================================
 // В папке src ты найдешь стартовые файлы проекта с базовой разметкой и готовыми стилями.
 // В файле app.js есть массив galleryItems, который содержит объекты с информацией о изображениях:
