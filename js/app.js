@@ -129,6 +129,7 @@ function onGalleryContainerClick(event) {
 
 //====== close modal window =========
 lightboxClose.addEventListener('click', overlayWindowClose);
+//закрытие модального окна по кнопке
 function overlayWindowClose() {
   lightboxRef.classList.remove('is-open');
   lightboxImage.src = '#';
@@ -136,18 +137,26 @@ function overlayWindowClose() {
     //console.log(lightboxImage);
 };
 
+//закрытие модального окна по клику мыши
 lightboxRef.addEventListener('click', overlayWindowsCloseByMouse);
 function overlayWindowsCloseByMouse(event) {
   let result = new MouseEvent('event', {
   });
-  lightboxRef.classList.remove('is-open')
+  overlayWindowClose()
+    // lightboxRef.classList.remove('is-open')
+    // lightboxImage.src = '#';
+    // lightboxImage.alt = '';
 };
 
+//закрытие модального окна по escape / esc
 document.addEventListener('keydown', overlayWindowCloseByEsc)
 function overlayWindowCloseByEsc(event) {
   if (event.key === 'Escape')
-      //console.log(event.key);  
-    lightboxRef.classList.remove('is-open')
+      //console.log(event.key); 
+    overlayWindowClose()
+    // lightboxRef.classList.remove('is-open')
+    // lightboxImage.src = '#';
+    // lightboxImage.alt = '';
 };
 
 //Стартовые файлы===========================================================
